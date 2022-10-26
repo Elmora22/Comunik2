@@ -3,7 +3,13 @@
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2021 Froala Labs
  */
+ .section1 .u-btn-2 {
+  border-style: solid;
+  margin: -83px 95px 0 auto;
+  padding: 0;
+}
 
+ 
 .fr-clearfix::after {
   clear: both;
   display: block;
