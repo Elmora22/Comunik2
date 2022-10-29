@@ -1,0 +1,94 @@
+<?php
+require_once "objects/Institucion.php";
+session_start();
+
+
+?>
+
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Enviar comunicado</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Enviar-comunicado.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Enviar comunicado">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-grey-80 u-header u-header" id="sec-dfdd"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <img class="u-expanded-height u-image u-image-contain u-image-default u-image-1" src="images/coollogo_com-131444044.png" alt="" data-image-width="287" data-image-height="119" data-href="Menu_i.html">
+      </div></header>
+    <section class="u-align-center u-clearfix u-image u-section-1" id="sec-83aa" data-image-width="1280" data-image-height="810">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="Menu_i.html" class="u-btn u-button-style u-none u-btn-1"></a>
+        <a href="Menu_i.html" class="u-border-1 u-border-hover-grey-90 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-white u-none u-radius-34 u-text-hover-black u-text-palette-2-base u-btn-2"><span class="u-file-icon u-icon u-icon-1"><img src="images/54782.png" alt=""></span>&nbsp;Volver
+        </a>
+        <div class="u-align-right u-form u-form-1">
+
+          <form action="comunicado.php" method="POST" style="padding: 15px;" source="customphp" name="form" redirect-address="Menu_f.php">
+           
+          <div class="u-form-date u-form-group u-label-top u-form-group-1">
+              <label for="date-afba" class="u-label u-spacing-4 u-label-1">Fecha</label>
+              <input type="date" placeholder="MM/DD/AAAA" id="date-afba" name="date" class="u-border-1 u-border-palette-5-base u-input u-input-rectangle u-radius-10 u-white u-input-1" required="">
+            </div>
+            <div class="u-form-group u-form-name u-label-top">
+              <label for="name-6797" class="u-label u-spacing-4 u-label-2">Nombre docente</label>
+              <input type="text" placeholder="Nombre y apellido" id="name-6797" name="name" class="u-border-1 u-border-palette-5-base u-input u-input-rectangle u-radius-10 u-white u-input-2" required="">
+            </div>
+            <div class="u-form-group u-form-radiobutton u-label-top u-form-group-3">
+              <div class="u-form-radio-button-wrapper">
+                <input type="radio" name="radiobutton" value="Informativo" required="required" autofocus="autofocus">
+                <label class="u-label u-label-3" for="radiobutton">Informativo</label>
+                <br>
+                <input type="radio" name="radiobutton" value="Urgente" required="required" autofocus="autofocus">
+                <label class="u-label u-label-4" for="radiobutton">Urgente</label>
+                <br>
+                <input type="radio" name="radiobutton" value="Recordatorio" required="required" autofocus="autofocus">
+                <label class="u-label u-label-5" for="radiobutton">Recordatorio</label>
+                <br>
+              </div>
+            </div>
+            <div class="u-form-group u-label-top">
+              <label for="email-6797" class="u-label u-spacing-4 u-label-6">Asunto</label>
+              <input type="text" placeholder="Asunto" id="email-6797" name="Asunto" class="u-border-1 u-border-palette-5-base u-input u-input-rectangle u-radius-10 u-white u-input-3" required="required">
+            </div>
+            <div class="u-form-group u-form-message u-label-top">
+              <label for="message-6797" class="u-label u-spacing-4 u-label-7">Crear mensaje</label>
+              <textarea placeholder="Escriba su mensaje..." rows="6" cols="50" id="message-6797" name="message" class="u-border-1 u-border-palette-5-base u-input u-input-rectangle u-radius-10 u-white u-input-4" required=""></textarea>
+            </div>
+
+            <div class="u-form-group u-form-submit u-label-top">
+            <input type="hidden" value="submit" class="u-form-control-hidden">
+            <div class="u-align-right u-btn-submit-container">
+                <input type="hidden" value="submit" class="u-border-hover-grey-75 u-border-none u-btn u-btn-submit u-button-style u-none u-btn-3">
+              </div>
+            </div>
+
+            <!--<div class="u-form-send-message u-form-send-success">El mensaje ha sido enviado con éxtio</div>
+            <div class="u-form-send-error u-form-send-message">Lo siento! El mensaje no ha sido enviado.</div>-->
+            <input type="hidden" value="" name="recaptchaResponse"> 
+            </div>
+              <input type="submit" value="Enviar" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-dark-1 u-radius-7 u-btn-4">
+            </div>
+          </form>
+        </div>
+
+        <a type="submit" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-dark-1 u-radius-7 u-btn-4">Enviar</a>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-49fd"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">*INSTITUCION* Terciario Urquiza, Rosario, Santa fe, Argentina®</p>
+      </div></footer>
+
+</body></html>

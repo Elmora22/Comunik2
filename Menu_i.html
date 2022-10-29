@@ -1,0 +1,75 @@
+<?php
+require_once "objects/Institucion.php";
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+  header("location: /comunik2/Login.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+    <meta name="description" content="">
+    <title>Menu</title>
+    <link rel="stylesheet" href="diseño_i.css" media="screen">
+<link rel="stylesheet" href="Menu_i.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jqueryi.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepagei.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.19.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Menu">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+
+  <body class="u-body u-overlap u-white u-xl-mode" data-lang="es"><header class="u-clearfix u-grey-80 u-header u-header" id="sec-dfdd"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="Menu_i.html" class="u-image u-logo u-image-1" data-image-width="287" data-image-height="119" title="Menu" rel="nofollow">
+          <img src="images/coollogo_com-131444044.png" class="u-logo-image u-logo-image-1">
+        </a>
+      </div></header>
+    <section class="u-clearfix u-image u-section-1" id="sec-4141" data-image-width="1280" data-image-height="810">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="logout.php" class="u-border-none u-btn u-button-style u-hover-palette-2-base u-palette-2-light-2 u-btn-1">Cerrar sesion</a>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-border-2 u-border-grey-75 u-container-style u-hover-feature u-list-item u-opacity u-opacity-90 u-radius-23 u-repeater-item u-shape-round u-white u-list-item-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="" data-href="Enviar-comunicado.php" >
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 50 50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f0a0"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 50 50" x="0px" y="0px" id="svg-f0a0" style="enable-background:new 0 0 50 50;"><circle style="fill:#43B05C;" cx="25" cy="25" r="25"></circle><line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25" y1="13" x2="25" y2="38"></line><line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="37.5" y1="25" x2="12.5" y2="25"></line></svg></span>
+                <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-1">Enviar comunicado</h3>
+              </div>
+            </div>
+            <div class="u-border-2 u-border-grey-75 u-container-style u-hover-feature u-list-item u-opacity u-opacity-90 u-radius-23 u-repeater-item u-shape-round u-white u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="" data-href="Historial_i.php">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 58 58"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7f8f"></use></svg><svg class="u-svg-content" viewBox="0 0 58 58" x="0px" y="0px" id="svg-7f8f" style="enable-background:new 0 0 58 58;"><circle style="fill:#E7ECED;" cx="29" cy="29" r="29"></circle><path style="fill:#424A60;" d="M29,4c13.785,0,25,11.215,25,25S42.785,54,29,54S4,42.785,4,29S15.215,4,29,4 M29,0
+	C12.984,0,0,12.984,0,29s12.984,29,29,29s29-12.984,29-29S45.016,0,29,0L29,0z"></path><g><path style="fill:#7383BF;" d="M29,5.879c-0.552,0-1,0.447-1,1v1c0,0.553,0.448,1,1,1s1-0.447,1-1v-1
+		C30,6.326,29.552,5.879,29,5.879z"></path><path style="fill:#7383BF;" d="M29,48.879c-0.552,0-1,0.447-1,1v1c0,0.553,0.448,1,1,1s1-0.447,1-1v-1
+		C30,49.326,29.552,48.879,29,48.879z"></path><path style="fill:#7383BF;" d="M51,27.879h-1c-0.552,0-1,0.447-1,1s0.448,1,1,1h1c0.552,0,1-0.447,1-1S51.552,27.879,51,27.879z"></path><path style="fill:#7383BF;" d="M8,27.879H7c-0.552,0-1,0.447-1,1s0.448,1,1,1h1c0.552,0,1-0.447,1-1S8.552,27.879,8,27.879z"></path><path style="fill:#7383BF;" d="M43.849,12.615l-0.707,0.707c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293
+		s0.512-0.098,0.707-0.293l0.707-0.707c0.391-0.391,0.391-1.023,0-1.414S44.24,12.224,43.849,12.615z"></path><path style="fill:#7383BF;" d="M13.444,43.021l-0.707,0.707c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293
+		s0.512-0.098,0.707-0.293l0.707-0.707c0.391-0.391,0.391-1.023,0-1.414S13.834,42.631,13.444,43.021z"></path><path style="fill:#7383BF;" d="M44.556,43.021c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l0.707,0.707
+		c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414L44.556,43.021z"></path><path style="fill:#7383BF;" d="M14.151,12.615c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l0.707,0.707
+		c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414L14.151,12.615z"></path>
+</g><line style="fill:none;stroke:#424A60;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="26" y1="28.879" x2="18" y2="28.879"></line><line style="fill:none;stroke:#424A60;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="29" y1="25.879" x2="29" y2="14.879"></line><circle style="fill:none;stroke:#424A60;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" cx="29" cy="28.879" r="3"></circle></svg></span>
+                <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-2">Historial comunicados</h3>
+              </div>
+            </div>
+            <div class="u-border-2 u-border-grey-75 u-container-style u-hover-feature u-list-item u-opacity u-opacity-90 u-radius-23 u-repeater-item u-shape-round u-white u-list-item-3" data-href="Contactos.php"> 
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-icon-3"><img src="images/753210.png" alt=""></span>
+                <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-3">Contactos</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-49fd"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">*INSTITUCION* Terciario Urquiza, Rosario, Santa fe, Argentina®</p>
+      </div>
+    </footer>
+</body></html>
